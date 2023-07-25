@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="Web development" />
+	<meta name="keywords"    content="Assignment2" />
+	<meta name="author"      content="Fahmida Eshamoni" />
+	
+
+    <!-- Title -->
+    <title>Sweet Life</title>
+
+    <!-- External CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+    
+    <!-- Custom JS -->
+    <script src="order2.js"></script>
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <a href="#" class="logo"> <i class="fas fa-ice-cream"></i> Sweet Life </a>
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+            <ul class="a">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="registration2.html">Registration</a></li>
+                <li><a class="active" href="order2.html">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order">
+        <div class="container">
+            <div class="title">Fill in the form</div>
+            <div class="content">
+                <!-- Order Form -->
+                <form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+                    <fieldset>
+                        <!-- Order Preferences: Delivery or Pick-up -->
+                        <div class="radioinput">
+                            <label>Order Preferences?</label>
+                            <input type="radio" onclick="yesnoCheck();" name="take_order" id="delivery" value="delivery" />
+                            <label for="delivery">Delivery</label>
+                            <input type="radio" onclick="yesnoCheck();" name="take_order" id="pickup" value="pickup" />
+                            <label for="pickup">Pick-up</label>
+                        </div>
+                        <!-- Delivery Details -->
+                        <div id="ifYes" style="visibility: hidden">
+                            <div class="textinput">
+                                <label for="deliveryaddress">Delivery address</label>
+                                <input id="deliveryaddress" type="text" name="delivery_address" />
+                            </div>
+                            <div class="radioinput">
+                                <label for="same">Billing address same as delivery address</label>
+                                <input id="same" type="checkbox" name="same_as_delivery_address" value="yes" onclick="copy(event)" />
+                            </div>
+                            <div class="textinput">
+                                <label for="billaddress" >Billing address</label>
+                                <input id="billaddress" type="text" name="billing_adress" />
+                            </div>
+                        </div>
+                        <!-- Contact Information -->
+                        <div class="textinput">
+                            <label for="contact">Contact number</label>
+                            <input id="contact" type="number" name="contact" />
+                        </div>
+                        <!-- Email Information -->
+                        <div class="textinput">
+                            <label for="email">Email (for receipt)</label>
+                            <input type="email" id="email" name="email" />
+                        </div>
+                        <!-- Payment Method -->
+                        <div class="radioinput">
+                            <label for="paymentmethod">Payment method</label>
+                            <input type="radio" onclick="yesCheck();" name="pay" id="paypickup" value="on_pick-up" />
+							<label for="paypickup">On pick-up</label>
+                            <input type="radio" onclick="yesCheck();" name="pay" id="payonline" value="online" />
+							<label for="payonline">Online</label>
+                        </div>
+                    </fieldset>
+                    <!-- Credit Card Information -->
+                    <div id="ifyeah" style="visibility: hidden">
+                        <fieldset>
+                            <legend>Credit card information</legend>
+                            <!-- Card Type -->
+                            <div class="radioinput">
+                                <label>Choose one of the following types</label>
+                                <input type="radio" id="visacard" name="card_type" value="Visa" />
+                                <label for="visacard">Visa</label>
+                                <input type="radio" id="mastercard" name="card_type" value="Mastercard" />
+                                <label for="mastercard">Mastercard</label>
+                                <input type="radio" id="americancard" name="card_type" value="American_Express" />
+                                <label for="americancard">American Express</label>
+                            </div>
+                            <!-- Card Number -->
+                            <div class="textinput">
+                                <label for="creditnumber">Enter credit card number</label>
+                                <input id="creditnumber" type="number" name="credit_number" />
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- Reset and Submit Button -->
+                    <div class="buttoninput">
+                        <input type="reset" value="Reset" />
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="credit2">created by <span>Sweet Life</span> | all right reserved!</div>
+    </section>
+</body>
+</html>
+
+
+	

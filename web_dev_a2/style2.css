@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
+/* -- Button Active state -- */
+.active {
+    background-color: #e90c4a;
+    color: rgb(237, 190, 211);
+}
+
+/* -- Styling for unordered list a -- */
+ul.a {
+    list-style-type: none; /* remove bullet points */
+    margin: 0; /* remove margin */
+    padding: 0; /* remove padding */
+    overflow: hidden; /* hide overflow */
+    background-color: #e068ac; /* set background color */
+}
+
+/* -- Styling for list item within ul -- */
+li {
+    float: left; /* make list items align horizontally */
+}
+
+/* -- Styling for anchor tag within li -- */
+li a {
+    display: block; /* make the link occupy the full space of its parent li */
+    color: white; /* set link color */
+    text-align: center; /* align text center */
+    padding: 14px 16px; /* add padding */
+    text-decoration: none; /* remove underline */
+}
+
+/* -- Hover state for anchor tag within li -- */
+li a:hover {
+    background-color: #fbf5f9; /* change background color when hovered */
+}
+
+/* -- Styling for the last list item within ul -- */
+li:last-child {
+    border-right: none; /* remove right border */
+}
+
+/* -- CSS variables -- */
+:root {
+    --main-color: hsl(339, 93%, 42%);
+    --primary-color: #e068ac;
+    --bg-color: #f9f3f6;
+    --hover: #e4469a;
+    --black: #222;
+    --white: #e28fae;
+    --border: 1.6px solid #c71818;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* -- General CSS reset and global styles -- */
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* -- HTML styles -- */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 6px;
+}
+
+/* -- Scrollbar styles -- */
+html::-webkit-scrollbar {
+    width: 16px;
+}
+html::-webkit-scrollbar-track {
+    background-color: #e28fae;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+/* -- Section styles -- */
+section {
+    padding: 32px 7%;
+}
+
+/* -- Heading styles -- */
+.heading {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 48px;
+    font-size: 64px;
+    margin-top: 64px;
+}
+
+/* -- Header styles -- */
+.header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #e068ac;
+    z-index: 1000;
+}
+
+/* -- Logo styles within header -- */
+.header .logo {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+/* -- Logo icon styles within header -- */
+.header .logo i {
+    color: var(--main-color);
+    padding-right: 8px;
+}
+
+/* -- Navigation link styles within header -- */
+.header .navbar a {
+    font-size: 30px;
+    margin-left: 44.8px;
+    color: var(--black);
+}
+
+/* -- Navigation link hover state within header -- */
+.header .navbar a:hover {
+    padding-bottom: 8px;
+    color: var(--main-color);
+    border-bottom: var(--main-color);
+}
+
+/* -- Menu button styles within header -- */
+#menu-btn {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+/* -- About section styles -- */
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .content {
+    flex: 16 16 600px;
+    padding: 20px;
+}
+
+.about .row .content p {
+    font-size: 25.6px;
+    color: #f1678e;
+    padding: 8px 0;
+    line-height: 1.8;
+}
+
+/* -- Menu section styles -- */
+.menu {
+    background: #f9f3f6;
+}
+
+/* -- Grid layout for box container in the menu section -- */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: 24px;
+}
+
+/* -- Styling for image in box within box container -- */
+.menu .box-container .box .image {
+    height: 480px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+/* -- Styling for img within image -- */
+.menu .box-container .box .image img {
+    object-fit: cover;
+}
+
+/* -- Styling for content within box -- */
+.menu .box-container .box .content {
+    padding: 24px;
+    text-align: center;
+}
+
+/* -- Styling for title within content -- */
+.menu .box-container .box .content .title {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+/* -- Styling for paragraph text within content -- */
+.menu .box-container .box .content p {
+    font-size: 25.6px;
+    line-height: 1.8;
+    color: #a6a9ab;
+    padding: 16px 0;
+}
+
+/* -- Styling for price within content -- */
+.menu .box-container .box .content .price {
+    color: var(--main-color);
+    font-size: 40px;
+    padding: 8px 0;
+}
+
+/* -- Styling for span within price -- */
+.menu .box-container .box .content .price span {
+    font-size: 24px;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+/* -- Footer styles -- */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* -- Icon container styles within footer -- */
+.footer .icons-container .icons {
+    text-align: center;
+    padding: 5px 2px;
+}
+
+/* -- h3 styles within icons -- */
+.footer .icons-container .icons h3 {
+    font-size: 32px;
+    color: var(--black);
+    padding: 8px 0;
+    text-transform: capitalize;
+}
+
+/* -- Paragraph styles within icons -- */
+.footer .icons-container .icons p {
+    line-height: 1.5;
+    font-size: 25.2px;
+    color: #e4469a;
+    text-transform: capitalize;
+}
+
+/* -- Credit styles within footer -- */
+.footer .credit {
+    margin-top: 48px;
+    padding-top: 48px;
+    font-size: 32px;
+    color: var(--black);
+}
+
+/* -- Span styles within credit -- */
+.footer .credit span {
+    color: var(--main-color);
+}
+
+/* -- Title styles -- */
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #c70831;
+    position: relative;
+}
+
+/* -- Container styles -- */
+.container {
+    max-width: 600px;
+    width: 80%;
+    margin: auto;
+    background-color: #f6d8e3;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #c70831;
+}
+
+/* -- Label styles -- */
+label {
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    width: 160px;
+    margin-right: 60px;
+    color: #c70831;
+}
+
+/* -- Input styles -- */
+input {
+    width: 50%;
+}
+
+/* -- Styles for all input fields with text type -- */
+.textinput {
+    margin: 10px;
+}
+
+/* -- Style for the container of radio input fields -- */
+.radioinput fieldset {
+    border: none;
+}
+
+/* -- Style for the title of a group of radio input fields -- */
+.radioinput legend {
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    width: 160px;
+    margin-right: 60px;
+    color: #c70831;
+}
+
+/* -- Style for the first flavour radio input -- */
+#flavour1 {
+    accent-color: #ea87c7;
+}
+
+/* -- Style for the second flavour radio input -- */
+#flavour2 {
+    accent-color: #ea87c7;
+}
+
+/* -- Style for the third flavour radio input -- */
+#flavour3 {
+    accent-color: #ea87c7;
+}
+
+/* -- Style for all radio input fields -- */
+.radioinput input {
+    width: 15px;
+}
+
+/* -- Style for the label of radio input fields -- */
+.radioinput label {
+    float: none;
+    text-align: left;
+}
+
+/* -- Style for the container of the submit button -- */
+.buttoninput {
+    text-align: right;
+}
+
+/* -- Style for the submit button -- */
+.buttoninput input {
+    width: auto;
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #c70831;
+}
+
+/* -- Style for all text input fields when they are in focus -- */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    background-color: #e4469a;
+}
+
+/* -- Style for all password input fields when they are in focus -- */
+input[type="password"]:focus {
+    background-color: #e4469a;
+}
+
+/* -- Style for active page menu item -- */
+.current {
+    background-color: #e90c4a;
+}
+
+/* -- Style for the second credit line in the footer -- */
+.footer .credit2 {
+    margin-top: 8px;
+    padding-top: 8px;
+    font-size: 15px;
+    color: var(--black);
+}
+
+/* -- Style for the span element in the second credit line in the footer -- */
+.footer .credit2 span {
+    color: var(--main-color);
+}
+
+
+
+
+
+

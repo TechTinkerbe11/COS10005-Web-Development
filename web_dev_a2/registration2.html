@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="description" content="Web development" />
+	<meta name="keywords"    content="Assignment2" />
+	<meta name="author"      content="Fahmida Eshamoni" />
+	
+    <!-- Title of the webpage -->
+    <title>Sweet Life</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Custom JavaScript for site-specific functionality -->
+    <script src="registration2.js"></script>
+
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <!-- Logo with an ice-cream icon -->
+        <a href="#" class="logo"> <i class="fas fa-ice-cream"></i> Sweet Life </a>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="a">
+                <li><a href="index2.html">Home</a></li>
+                <li><a class="active" href="registration2.html">Registration</a></li>
+                <li><a href="order2.html">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration" id="registration">
+        <div class="container">
+            <!-- Title for the section -->
+            <div class="title">Register Now!!</div>
+            <!-- Form for registration -->
+            <div class="content">
+                <form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+                    <fieldset>
+                        <!-- Input fields for the form -->
+                        <div class="textinput">
+                            <label for="uname">Username</label>
+                            <input id="uname" type="text" name="uname" />
+                        </div>
+                        <div class="textinput">
+                            <label for="pwd1">Password</label>
+                            <input id="pwd1" type="password" name="pwd1" />
+                        </div>
+                        <div class="textinput">
+                            <label for="pwd2">Retype Password</label>
+                            <input id="pwd2" type="password" name="pwd2" />
+                        </div>
+                        <div class="textinput">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="textinput">
+                            <label for="postcode">Postcode</label>
+                            <input id="postcode" type="number" name="postcode" />
+                        </div>
+                        <!-- Radio buttons for gender selection -->
+                        <div class="radioinput">
+                            <label>Gender</label>
+                            <input id="genf" type="radio" name="gender" value="F" />
+                            <label for="genf">Female</label>
+                            <input id="genm" type="radio" name="gender" value="M" />
+                            <label for="genm">Male</label>
+                        </div>
+                        <!-- Dropdown for dietary restrictions -->
+                        <div class="radioinput">
+                            <label>Any Dietary Restriction</label>
+                            <select name="diet" id="diet">
+                                <option value="No" selected="selected">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <!-- Checkbox for favorite ice-cream flavors -->
+                        <div class="radioinput">
+                            <label>Favorite Ice cream flavor</label>
+                            <input type="checkbox" id="flavour1" value="Vanilla" name="flavour1" />
+							<label for="flavour1">Vanilla</label>
+                            <input type="checkbox" id="flavour2" value="Chocolate" name="flavour2" />
+							<label for="flavour2">Chocolate</label>
+                            <input type="checkbox" id="flavour3" value="Mango" name="flavour3" />
+							<label for="flavour3">Mango</label>
+                        </div>
+                    </fieldset>
+                    <!-- Buttons for resetting and submitting the form -->
+                    <div class="buttoninput">
+                        <input type="reset" value="Reset" />
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <!-- Footer credits -->
+        <div class="credit2">Created by <span>Sweet Life</span> | All right reserved!</div>
+    </section>
+</body>
+</html>
+
